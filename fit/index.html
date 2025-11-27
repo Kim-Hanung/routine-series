@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Routine Fit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script>
+        // 오늘 날짜 표시용
+        function setToday() {
+            const el = document.getElementById('today');
+            const now = new Date();
+            const y = now.getFullYear();
+            const m = String(now.getMonth() + 1).padStart(2, '0');
+            const d = String(now.getDate()).padStart(2, '0');
+            el.textContent = `${y}-${m}-${d}`;
+        }
+        window.addEventListener('DOMContentLoaded', setToday);
+    </script>
+</head>
+
+<body class="page-routine">
+    <div class="container">
+        <header class="header">
+            <h1>Routine Fit</h1>
+            <p class="subtitle">기본 운동 루틴을 체크하는 무료 웹 도구</p>
+        </header>
+
+        <main class="main">
+            <a href="../index.html" style="font-size:13px;color:#3b82f6;text-decoration:none;">
+                ← Routine Series 홈으로
+            </a>
+
+            <section class="routine-box">
+                <div class="routine-meta">
+                    <span>오늘 날짜</span> :
+                    <span id="today"></span>
+                </div>
+
+                <ul class="routine-list">
+                    <li class="routine-item">
+                        <div class="routine-label">
+                            <strong>푸시업</strong>
+                            <span>오늘 목표 개수 달성 여부</span>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li class="routine-item">
+                        <div class="routine-label">
+                            <strong>스쿼트</strong>
+                            <span>하루 최소 한 세트 이상</span>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li class="routine-item">
+                        <div class="routine-label">
+                            <strong>걷기</strong>
+                            <span>10분 이상 걷기 또는 가벼운 산책</span>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 Routine Fit · 루틴 시리즈 v0.1</p>
+        </footer>
+    </div>
+</body>
+
+</html>

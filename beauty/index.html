@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Routine Beauty</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script>
+        function setToday() {
+            const el = document.getElementById('today');
+            const now = new Date();
+            const y = now.getFullYear();
+            const m = String(now.getMonth() + 1).padStart(2, '0');
+            const d = String(now.getDate()).padStart(2, '0');
+            el.textContent = `${y}-${m}-${d}`;
+        }
+        window.addEventListener('DOMContentLoaded', setToday);
+    </script>
+</head>
+
+<body class="page-routine">
+    <div class="container">
+        <header class="header">
+            <h1>Routine Beauty</h1>
+            <p class="subtitle">기본 스킨케어 순서를 체크하는 무료 웹 도구</p>
+        </header>
+
+        <main class="main">
+            <a href="../index.html" style="font-size:13px;color:#ec4899;text-decoration:none;">
+                ← Routine Series 홈으로
+            </a>
+
+            <section class="routine-box">
+                <div class="routine-meta">
+                    <span>오늘 날짜</span> :
+                    <span id="today"></span>
+                </div>
+
+                <ul class="routine-list">
+                    <li class="routine-item">
+                        <div class="routine-label">
+                            <strong>세안</strong>
+                            <span>하루 마무리 또는 아침 세안 완료</span>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li class="routine-item">
+                        <div class="routine-label">
+                            <strong>토너</strong>
+                            <span>피부 결 정리 및 수분 공급</span>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li class="routine-item">
+                        <div class="routine-label">
+                            <strong>에센스 / 앰플</strong>
+                            <span>피부 고민에 맞춘 집중 케어</span>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li class="routine-item">
+                        <div class="routine-label">
+                            <strong>크림</strong>
+                            <span>수분 보호막으로 마무리</span>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 Routine Beauty · 루틴 시리즈 v0.1</p>
+        </footer>
+    </div>
+</body>
+
+</html>
