@@ -1,152 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>Routine Series – 기획 포트폴리오</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Routine Series · 프로젝트 아카이브</title>
+  <style>
+    body { margin:0; padding:0; font-family:"Pretendard",sans-serif; background:#fafafa; color:#222; }
+    header { padding:40px 20px; background:#fff; border-bottom:1px solid #e5e5e5; text-align:center; }
+    h1 { font-size:32px; font-weight:700; margin:0 0 10px 0; }
+    p.subtitle { font-size:18px; color:#555; margin:0; }
+    .container { max-width:920px; margin:40px auto; padding:0 20px 60px 20px; }
+    .intro { background:#fff; padding:22px; border-radius:16px; box-shadow:0 3px 12px rgba(0,0,0,0.04); margin-bottom:28px; font-size:15px; color:#444; }
+    .intro strong { font-weight:600; }
+    .section-title { font-size:22px; font-weight:700; margin-bottom:18px; }
+    .project-list { display:flex; flex-direction:column; gap:18px; }
+    .project-item { background:#fff; padding:20px 22px; border-radius:16px; box-shadow:0 3px 12px rgba(0,0,0,0.06); }
+    .project-item h3 { margin:0; font-size:20px; font-weight:700; }
+    .project-item p { margin:6px 0; font-size:15px; color:#444; }
+    .meta-line { font-size:14px; color:#666; }
+    .meta-label { font-weight:600; color:#333; }
+  </style>
 </head>
-<body class="rs-body">
-  <main class="rs-container rs-page rs-page--portfolio">
+<body>
+<header>
+  <h1>Routine Series · 프로젝트 아카이브</h1>
+  <p class="subtitle">Routine Beauty · Routine Fit · Routine Balance</p>
+</header>
+<div class="container">
+  <div class="intro">
+    <p><strong>Routine Series</strong>는 일상 루틴을 모듈별로 분리해 설계한 개인 프로젝트입니다. 이 페이지는 각 모듈의 역할, 설계 의도, 진행 상태를 한눈에 정리해 두기 위한 아카이브입니다.</p>
+    <p>Plan150 · HUCU 프로젝트 아카이브와 마찬가지로, 상단에서는 전체 구조를 확인하고, 아래에서는 개별 모듈의 기획 포인트와 기술 스택을 기록하는 용도로 사용합니다.</p>
+  </div>
 
-    <header class="rs-hero">
-      <h1 class="rs-title">Routine Series 기획 포트폴리오</h1>
-      <p class="rs-subtitle">
-        Routine Fit · Routine Beauty · Routine Balance<br>
-        세 가지 무료 루틴 도구로 개인의 일상 건강 플랜을 설계하는 웹앱 기획
-      </p>
+  <div class="section-title">Routine 모듈</div>
+  <div class="project-list">
 
-      <div class="rs-hero-links">
-        <a href="index.html" class="rs-btn rs-btn--outline">
-          실제 데모 홈으로 이동
-        </a>
-      </div>
-    </header>
+    <div class="project-item">
+      <h3>Routine Beauty</h3>
+      <p>데일리 스킨케어 루틴을 단계별로 기록하는 모듈입니다. 세안 → 토너 → 에센스 → 크림처럼 흐름이 고정된 프로세스를 전제로, 각 단계에 실제 사용하는 제품을 연결해 관리할 수 있도록 설계했습니다.</p>
+      <p class="meta-line"><span class="meta-label">역할</span> 기획 · 정보 구조 설계 · 기본 UI 구성</p>
+      <p class="meta-line"><span class="meta-label">기능 포인트</span> 단계별 루틴 정의, 제품 등록·수정, 사용 이력 로그 구조</p>
+      <p class="meta-line"><span class="meta-label">기술 스택</span> PHP, MySQL, HTML/CSS, 기본 JavaScript</p>
+      <p class="meta-line"><span class="meta-label">진행 상태</span> 프로토타입 구축 완료, 화면 정리 및 데이터 구조 다듬는 중</p>
+    </div>
 
-    <section class="rs-section">
-      <h2 class="rs-section-title">1. 프로젝트 개요</h2>
-      <p class="rs-text">
-        Routine Series는 “작은 루틴의 반복이 몸과 마음의 균형을 만든다”는 전제를 바탕으로 설계된
-        개인 루틴 관리 웹 도구입니다. 단순한 체크리스트가 아니라, 
-        운동·뷰티·생활 밸런스를 세 축으로 나누어 한 사람의 일상 건강 플랜을 구성하는 것을 목표로 합니다.
-      </p>
-      <p class="rs-text">
-        이번 버전은 누구나 무료로 사용할 수 있는 <strong>오픈 소스 기초 버전</strong>으로,
-        전체 세계관 기획의 “베이스 캠프” 역할을 하는 페이지입니다.
-      </p>
-    </section>
+    <div class="project-item">
+      <h3>Routine Fit</h3>
+      <p>푸시업, 스쿼트, 걷기 시간 등 반복 운동을 최소 입력으로 기록하는 모듈입니다. "오늘 몇 개 했는가"에만 집중하게 만들기 위해, 복잡한 통계 화면보다 빠른 입력 동선을 우선으로 두었습니다.</p>
+      <p class="meta-line"><span class="meta-label">역할</span> 기획 · UX 플로우 설계 · 화면 구조 정의</p>
+      <p class="meta-line"><span class="meta-label">기능 포인트</span> 운동 항목별 카운트 기록, 일/주/월 단위 합산, 간단한 추세 확인</p>
+      <p class="meta-line"><span class="meta-label">기술 스택</span> PHP, MySQL, HTML/CSS, 기본 JavaScript</p>
+      <p class="meta-line"><span class="meta-label">진행 상태</span> 기본 입력·조회 기능 구현, 추후 그래프·리포트 화면 추가 예정</p>
+    </div>
 
-    <section class="rs-section">
-      <h2 class="rs-section-title">2. 타깃과 문제 정의</h2>
-      <p class="rs-text">
-        주요 타깃은 20–40대 직장인·자영업자 등, 
-        “운동도 하고 싶고, 피부 관리도 신경 쓰고 싶고, 식사 밸런스도 챙기고 싶지만  
-        따로따로 관리하기엔 번거로운” 사람들입니다.
-      </p>
-      <p class="rs-text">
-        기존 루틴 앱 대부분은 운동만, 혹은 다이어트만, 혹은 스킨케어만 따로 다루는 경우가 많습니다.
-        Routine Series는 한 사람의 하루를 <strong>몸(운동) · 겉(뷰티) · 안(식단/생활)</strong>으로 나누어
-        한 화면 안에서 균형을 점검할 수 있도록 기획했습니다.
-      </p>
-    </section>
+    <div class="project-item">
+      <h3>Routine Balance</h3>
+      <p>식단과 생활 패턴을 함께 기록하는 모듈입니다. 끼니별 식사 내용, 간단한 컨디션 메모, 수면·카페인 섭취 등의 정보를 한 화면에서 정리해, 장기적으로 어떤 패턴이 나오는지 확인하는 데 초점을 두었습니다.</p>
+      <p class="meta-line"><span class="meta-label">역할</span> 기획 · 데이터 항목 정의 · 레이아웃 구성</p>
+      <p class="meta-line"><span class="meta-label">기능 포인트</span> 끼니별 기록, 메모 필드, 날짜별 로그 리스트업</p>
+      <p class="meta-line"><span class="meta-label">기술 스택</span> PHP, MySQL, HTML/CSS</p>
+      <p class="meta-line"><span class="meta-label">진행 상태</span> 구조 설계 완료, 실제 입력·조회 화면은 1차 구현 단계</p>
+    </div>
 
-    <section class="rs-section">
-      <h2 class="rs-section-title">3. 핵심 모듈 구성</h2>
-
-      <article class="rs-card rs-card--fit">
-        <h3 class="rs-card-title">3-1. Routine Fit (운동 루틴)</h3>
-        <p class="rs-text">
-          푸시업, 스쿼트, 걷기 등 기본 운동을 중심으로,  
-          “많이 하는 것”보다 “끊기지 않고 이어가는 것”에 초점을 둔 모듈입니다.
-        </p>
-        <p class="rs-text">
-          일 단위·주 단위 체크를 통해  
-          사용자가 스스로 적당한 기준을 정하고 유지할 수 있도록 설계했습니다.
-        </p>
-        <p class="rs-link-line">
-          ▶ 데모 보기:
-          <a href="fit/index.html">Routine Fit 페이지로 이동</a>
-        </p>
-      </article>
-
-      <article class="rs-card rs-card--beauty">
-        <h3 class="rs-card-title">3-2. Routine Beauty (스킨케어 루틴)</h3>
-        <p class="rs-text">
-          세안 – 토너 – 에센스 – 크림 – 자외선차단까지,  
-          기본 스킨케어 루틴을 단계별로 체크할 수 있는 모듈입니다.
-        </p>
-        <p class="rs-text">
-          “제품 추천”보다 “내가 이미 쓰는 루틴을 빠뜨리지 않는 것”에 초점을 맞춰
-          과소/과잉 관리를 피하고 꾸준함을 돕는 방향으로 기획했습니다.
-        </p>
-        <p class="rs-link-line">
-          ▶ 데모 보기:
-          <a href="beauty/index.html">Routine Beauty 페이지로 이동</a>
-        </p>
-      </article>
-
-      <article class="rs-card rs-card--balance">
-        <h3 class="rs-card-title">3-3. Routine Balance (생활 밸런스 루틴)</h3>
-        <p class="rs-text">
-          아침·점심·저녁 식사, 물 섭취, 간단한 메모 등  
-          하루의 기본적인 생활 패턴을 기록하는 모듈입니다.
-        </p>
-        <p class="rs-text">
-          다이어트 숫자보다는 “오늘 하루를 대략적으로 돌아볼 수 있는 기록장”에 가까운 콘셉트로,
-          나중에 심화 버전(Plan150 등)으로 확장될 수 있는 기초 데이터 역할을 합니다.
-        </p>
-        <p class="rs-link-line">
-          ▶ 데모 보기:
-          <a href="balance/index.html">Routine Balance 페이지로 이동</a>
-        </p>
-      </article>
-    </section>
-
-    <section class="rs-section">
-      <h2 class="rs-section-title">4. 디자인 & 구조 기획 포인트</h2>
-      <p class="rs-text">
-        세 모듈은 모두 동일한 UI 뼈대와 레이아웃을 사용하고,  
-        <strong>색상만 다르게 적용</strong>하는 것을 원칙으로 했습니다.
-        이는 이후 다른 색상 세계관 프로젝트(PinkMall 등)와도 통합될 수 있도록 한 설계 방향입니다.
-      </p>
-      <p class="rs-text">
-        또한, 로그인·데이터베이스 연동 전 단계의 “정적 버전”으로 구현하여  
-        누구나 코드 구조를 쉽게 파악하고, 필요 시 자신의 루틴에 맞게 수정할 수 있도록 해두었습니다.
-      </p>
-    </section>
-
-    <section class="rs-section">
-      <h2 class="rs-section-title">5. 향후 확장 계획 (요약)</h2>
-      <ul class="rs-text-list">
-        <li>회원별 루틴 저장 및 통계(일·월·연 단위) 기능</li>
-        <li>색상 세계관(PinkMall 등)과 연계한 라이프스타일 큐레이션</li>
-        <li>Plan150 등 장기 플랜과의 연동을 통한 “인생 주기별 루틴 설계”</li>
-      </ul>
-      <p class="rs-text">
-        현재 페이지는 이러한 확장을 위한 <strong>기초 구조와 콘셉트</strong>를 보여주는
-        포트폴리오용 버전입니다.
-      </p>
-    </section>
-
-    <section class="rs-section rs-section--center">
-      <h2 class="rs-section-title">6. 바로 체험해 보기</h2>
-      <p class="rs-text">
-        아래 버튼을 통해 실제 데모 화면으로 이동할 수 있습니다.
-      </p>
-      <div class="rs-cta-group">
-        <a href="index.html" class="rs-btn rs-btn--primary">Routine Series 데모 홈</a>
-        <a href="fit/index.html" class="rs-btn rs-btn--ghost">Routine Fit</a>
-        <a href="beauty/index.html" class="rs-btn rs-btn--ghost">Routine Beauty</a>
-        <a href="balance/index.html" class="rs-btn rs-btn--ghost">Routine Balance</a>
-      </div>
-    </section>
-
-    <footer class="rs-footer">
-      <p class="rs-footer-text">
-        © 2025 Routine Series. 기초 루틴 시리즈 v0.1 – 기획 포트폴리오용 설명 페이지.
-      </p>
-    </footer>
-
-  </main>
+  </div>
+</div>
 </body>
 </html>
